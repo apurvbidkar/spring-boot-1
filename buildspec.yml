@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-enviornment:
+      java: corretto17
+  pre-build:
+    commands:
+      - echo 'prebuild steps'
+  build:
+    commands:
+      - mvn install
+artifacts:
+  files:
+    - target/**/*
+    - scripts/**/*
+    - appspec.yml
+  
+      
